@@ -33,16 +33,6 @@ document.addEventListener("mousemove",function(dets){
     crsr.style.top = (dets.y) +"px";
 });
 
-
-// gsap.from(".page1 h1,.page1 h2", {
-//     y: 10,
-//     rotate: -10,
-//     opacity: 0,
-//     // delay: 0.3,
-//     duration: 0.7
-// })
-
-
 let tl = gsap.timeline({
     scrollTrigger:{
         trigger:".page1 h1",
@@ -56,7 +46,6 @@ let tl = gsap.timeline({
 tl.to(".page1 h1",
 {
     x:"-5rem",
-    // alignSelf:"center",
     duration:1,
 },"anim")
 
@@ -74,7 +63,6 @@ let tl2 = gsap.timeline({
     scrollTrigger: {
         trigger: ".page2 h1",
         scroller: ".main",
-        // markers:true,
         start: "top 50%",
         end: "top 55%",
         scrub: 3,
@@ -93,7 +81,6 @@ tl2.to(".page1 video",{
 
 tl2.from(".page2 h1",{
     x:50,
-    // scale:1.2,
     duration:1
 },"anim2")
 
@@ -113,7 +100,6 @@ var tl3 = gsap.timeline({
     scrollTrigger: {
         trigger: ".page3 h1",
         scroller: ".main",
-        // markers:true,
         start: "top 30%",
         end: "top 50%",
         scrub: 3
@@ -146,6 +132,7 @@ boxes.forEach(function(elem){
         crsr.style.height = "  15px"
         crsr.style.borderRadius = "50%"
         crsr.style.backgroundImage = `none`
+        crsr.style.mixBlendMode = "difference"
     })
 })
 
@@ -153,7 +140,6 @@ var tl4 = gsap.timeline({
     scrollTrigger: {
         trigger: ".page4",
         scroller: ".main",
-        // markers:true,
         start: "top 30%",
         end: "top 50%",
         scrub: 3
@@ -169,9 +155,4 @@ tl4.to(".main", {
 tl4.to("footer ul li a i", {
     color:"#of0d0d",
 })
-// tl4.from(".box", {
-//     x:-50,
-//     duration:1.2,
-//     scrub:3
-// })
 
